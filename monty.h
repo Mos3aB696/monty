@@ -62,5 +62,8 @@ void _pop(stack_t **head, unsigned int line_number);
 void _swap(stack_t **head, unsigned int line_number);
 void _add(stack_t **head, unsigned int line_number);
 void _nop(stack_t **head, unsigned int line_number);
+void addnode(stack_t **head, int num);
+void addqueue(stack_t **head, int num);
+void _queue(stack_t **head, unsigned int count);
 
 #endif
