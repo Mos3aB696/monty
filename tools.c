@@ -75,7 +75,7 @@ void addqueue(stack_t **head, int num)
  *
  * Return: nothing
  */
-void addnode(stack_t **head, num)
+void addnode(stack_t **head, int num)
 {
 	stack_t *new, *ptr;
 
