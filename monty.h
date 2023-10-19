@@ -65,5 +65,7 @@ void _nop(stack_t **head, unsigned int line_number);
 void addnode(stack_t **head, int num);
 void addqueue(stack_t **head, int num);
 void _queue(stack_t **head, unsigned int count);
+int _execute(char *line_content, stack_t **stack, unsigned int line_number,
+FILE *file);
 
 #endif
