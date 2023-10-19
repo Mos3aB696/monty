@@ -38,13 +38,13 @@ typedef struct instruction_s
  * @line_content: line content
  * @f_change: flag change
 */
-typedef struct info
+typedef struct info_t
 {
 	char *arg;
 	FILE *file;
 	char *line_content;
 	int f_change;
-}
+} info;
 
 
 #include <stdio.h>
