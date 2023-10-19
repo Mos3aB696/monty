@@ -55,16 +55,16 @@ extern info_t info;
 #include <ctype.h>
 
 void stack_free(stack_t *head);
-void _push(stack_t **head, unsigned int count);
-void _pall(stack_t **head, unsigned int count);
-void _pint(stack_t **head, unsigned int count);
+void _push(stack_t **head, unsigned int line_number);
+void _pall(stack_t **head, unsigned int line_number);
+void _pint(stack_t **head, unsigned int line_number);
 void _pop(stack_t **head, unsigned int line_number);
 void _swap(stack_t **head, unsigned int line_number);
 void _add(stack_t **head, unsigned int line_number);
 void _nop(stack_t **head, unsigned int line_number);
 void addnode(stack_t **head, int num);
 void addqueue(stack_t **head, int num);
-void _queue(stack_t **head, unsigned int count);
+void _queue(stack_t **head, unsigned int line_number);
 int _execute(char *line_content, stack_t **stack, unsigned int line_number,
 						 FILE *file);
 int main(int argc, char *argv[]);
