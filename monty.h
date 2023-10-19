@@ -31,8 +31,30 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct info - variables, files, line content
+ * @arg: val
+ * @file: monty file
+ * @line_content: line content
+ * @f_change: flag change
+*/
+typedef struct info
+{
+	char *arg;
+	FILE *file;
+	char *line_content;
+	int f_change;
+}
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <sys/types.h>
+#include <string.h>
+#include <ctype.h>
+
+
+void stack_free(stack_t *head)
 
 #endif
