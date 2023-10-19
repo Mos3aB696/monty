@@ -55,7 +55,7 @@ void _mod(stack_t **head, unsigned int line_number)
 	int length = 0, tmp;
 
 	p = *head;
-	while (p != NULL)
+	while (p)
 	{
 		p = p->next;
 		length++;
