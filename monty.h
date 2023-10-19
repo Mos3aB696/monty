@@ -38,14 +38,14 @@ typedef struct instruction_s
  * @line_content: line content
  * @f_change: flag change
 */
-typedef struct info_t
+typedef struct info_s
 {
 	char *arg;
 	FILE *file;
 	char *line_content;
 	int f_change;
-} info;
-
+} info_t;
+extern info_t info;
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -55,6 +55,9 @@ typedef struct info_t
 #include <ctype.h>
 
 
-void stack_free(stack_t *head)
+void stack_free(stack_t *head);
+void _push(stack_t **head, unsigned int count);
+void _pall(stack_t **head, unsigned int count);
+void _pint(stack_t **head, unsigned int count);
 
 #endif
