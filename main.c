@@ -1,8 +1,6 @@
-#define _GNU_SOURCE
 #include "monty.h"
-
-#include <stdio.h>
 info_t info = {NULL, NULL, NULL, 0};
+
 /**
  * main - code interpreter
  * @argc: number of args
