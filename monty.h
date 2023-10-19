@@ -32,7 +32,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct info - variables, files, line content
+ * struct info_s - variables, files, line content
  * @arg: val
  * @file: monty file
  * @line_content: line content
