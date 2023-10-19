@@ -37,7 +37,7 @@ typedef struct instruction_s
  * @file: monty file
  * @line_content: line content
  * @f_change: flag change
-*/
+ */
 typedef struct info_s
 {
 	char *arg;
@@ -54,10 +54,13 @@ extern info_t info;
 #include <string.h>
 #include <ctype.h>
 
-
 void stack_free(stack_t *head);
 void _push(stack_t **head, unsigned int count);
 void _pall(stack_t **head, unsigned int count);
 void _pint(stack_t **head, unsigned int count);
+void _pop(stack_t **head, unsigned int line_number);
+void _swap(stack_t **head, unsigned int line_number);
+void _add(stack_t **head, unsigned int line_number);
+void _nop(stack_t **head, unsigned int line_number);
 
 #endif
