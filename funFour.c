@@ -12,7 +12,7 @@ void _pchar(stack_t **head, unsigned int line_number)
 	stack_t *p;
 
 	p = *head;
-	if (p == NULL)
+	if (!p)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty", line_number);
 		fclose(info.file);
