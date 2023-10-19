@@ -16,7 +16,11 @@ int _execute(char *line_content, stack_t **stack, unsigned int line_number,
 			{"push", _push}, {"pall", _pall},
 			{"pop", _pop}, {"swap", _swap},
 			{"add", _add}, {"nop", _nop},
-			{"queue", _queue}, {"pint", _pint}, {NULL, NULL}
+			{"queue", _queue}, {"pint", _pint}, {NULL, NULL},
+			{"sub", _sub}, {"div", _div}, {"mul", _mul},
+			{"mod", _mod}, {"pchar", _pchar}, {"pstr", _pstr},
+			{"rotl", _rotl}, {"rotr", _rotr}, {"stack", _stack},
+			{"queue", _queue}
 			};
 	unsigned int i = 0;
 	char *op;
