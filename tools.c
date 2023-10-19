@@ -95,3 +95,17 @@ void addnode(stack_t **head, int num)
 	new->prev = NULL;
 	*head = new;
 }
+
+/**
+ * _stack - prints the top
+ * @head: stack head
+ * @line_number: line number
+ *
+ * Return: nothing
+*/
+void _stack(stack_t **head, unsigned int line_number)
+{
+	(void)head;
+	(void)line_number;
+	info.f_change = 0;
+}
