@@ -66,6 +66,7 @@ void addnode(stack_t **head, int num);
 void addqueue(stack_t **head, int num);
 void _queue(stack_t **head, unsigned int count);
 int _execute(char *line_content, stack_t **stack, unsigned int line_number,
-FILE *file);
+						 FILE *file);
+int main(int argc, char *argv[]);
 
 #endif
