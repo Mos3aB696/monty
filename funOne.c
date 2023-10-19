@@ -24,7 +24,7 @@ void _push(stack_t **head, unsigned int count)
 			fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(info.file);
 			free(info.line_content);
-			free_stack(*head);
+			stack_free(*head);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -33,7 +33,7 @@ void _push(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%d: usage:push integer\n", count);
 		fclose(info.file);
 		free(info.line_content);
-		free_stack(*head);
+		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}
 	num = atoi(info.arg);
@@ -79,7 +79,7 @@ void _pint(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
 		fclose(info.file);
 		free(info.line_content);
-		free_stack(*head);
+		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}
 
