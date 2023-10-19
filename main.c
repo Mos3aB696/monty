@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		info.line_content = content;
 		counter++;
 		if (read_line > 0)
-			execute(content, &stack, counter, file);
+			_execute(content, &stack, counter, file);
 		free(content);
 	}
 	stack_free(stack);
