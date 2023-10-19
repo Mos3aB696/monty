@@ -1,6 +1,14 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <sys/types.h>
+#include <string.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <unistd.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -46,13 +54,6 @@ typedef struct info_s
 	int f_change;
 } info_t;
 extern info_t info;
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <sys/types.h>
-#include <string.h>
-#include <ctype.h>
 
 void stack_free(stack_t *head);
 void _push(stack_t **head, unsigned int line_number);

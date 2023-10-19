@@ -13,11 +13,11 @@ void _pop(stack_t **head, unsigned int line_number)
 
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L<line_number>: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		fclose(info.file);
-		free(info.content);
+		free(info.line_content);
 		stack_free(*head);
-		exit(EXIT_FAILURE)
+		exit(EXIT_FAILURE);
 	}
 	temp = *head;
 	*head = temp->next;
@@ -44,7 +44,7 @@ void _swap(stack_t **head, unsigned int line_number)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L<line_number>: can't swap, stack too short\n",
+		fprintf(stderr, "L%d: can't swap, stack too short\n",
 						line_number);
 		fclose(info.file);
 		free(info.line_content);
@@ -78,7 +78,7 @@ void _add(stack_t **head, unsigned int line_number)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L<line_number>: can't add, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		fclose(info.file);
 		free(info.line_content);
 		stack_free(*head);

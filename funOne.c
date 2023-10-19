@@ -18,7 +18,8 @@ void _push(stack_t **head, unsigned int line_number)
 		for (; info.arg[i] != '\0'; i++)
 		{
 			if (info.arg[i] > 57 || info.arg[i] < 48)
-				flag = 1; }
+				flag = 1;
+		}
 		if (flag == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
@@ -55,7 +56,7 @@ void _pall(stack_t **head, unsigned int line_number)
 	stack_t *p;
 	(void)line_number;
 
-	p = head;
+	p = *head;
 	if (p == NULL)
 		return;
 	while (p)

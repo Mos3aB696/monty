@@ -44,6 +44,7 @@ void addqueue(stack_t **head, int num)
 {
 	stack_t *new, *ptr;
 
+	ptr = *head;
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
