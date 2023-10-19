@@ -23,7 +23,7 @@ void _push(stack_t **head, unsigned int count)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(info.file);
-			free(info.content);
+			free(info.line_content);
 			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
@@ -32,12 +32,12 @@ void _push(stack_t **head, unsigned int count)
 	{
 		fprintf(stderr, "L%d: usage:push integer\n", count);
 		fclose(info.file);
-		free(info.content);
+		free(info.line_content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	num = atoi(info.arg);
-	if (info.lifi == 0)
+	if (info.f_change == 0)
 		addnode(head, num);
 	else
 		addqueue(head, num);
@@ -78,7 +78,7 @@ void _pint(stack_t **head, unsigned int count)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
 		fclose(info.file);
-		free(info.content);
+		free(info.line_content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
