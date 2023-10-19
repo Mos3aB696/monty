@@ -22,14 +22,14 @@ void stack_free(stack_t *head)
 /**
  * _queue - prints the top
  * @head: stack head
- * @count: line_number
+ * @line_number: line_number
  *
  * Return: nothing
  */
-void _queue(stack_t **head, unsigned int count)
+void _queue(stack_t **head, unsigned int line_number)
 {
 	(void)head;
-	(void)count;
+	(void)line_number;
 	info.f_change = 1;
 }
 

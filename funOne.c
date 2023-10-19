@@ -3,11 +3,11 @@
 /**
  * _push -add node to stack
  * @head: stack head
- * @count: line_number
+ * @line_number: line_number
  *
  * Return: nothing
  */
-void _push(stack_t **head, unsigned int count)
+void _push(stack_t **head, unsigned int line_number)
 {
 	int num, i = 0, flag = 0;
 
@@ -21,7 +21,7 @@ void _push(stack_t **head, unsigned int count)
 				flag = 1; }
 		if (flag == 1)
 		{
-			fprintf(stderr, "L%d: usage: push integer\n", count);
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			fclose(info.file);
 			free(info.line_content);
 			stack_free(*head);
@@ -30,7 +30,7 @@ void _push(stack_t **head, unsigned int count)
 	}
 	else
 	{
-		fprintf(stderr, "L%d: usage:push integer\n", count);
+		fprintf(stderr, "L%d: usage:push integer\n", line_number);
 		fclose(info.file);
 		free(info.line_content);
 		stack_free(*head);
@@ -46,14 +46,14 @@ void _push(stack_t **head, unsigned int count)
 /**
  * _pall - function that print stack
  * @head: stach head
- * @count: not used
+ * @line_number: not used
  *
  * Reaturn: nothing
  */
-void _pall(stack_t **head, unsigned int count)
+void _pall(stack_t **head, unsigned int line_number)
 {
 	stack_t *p;
-	(void)count;
+	(void)line_number;
 
 	p = head;
 	if (p == NULL)
@@ -68,15 +68,15 @@ void _pall(stack_t **head, unsigned int count)
 /**
  * _pint- prints the top
  * @head: stack head
- * @count: line_number
+ * @line_number: line_number
  *
  * Return: nothing
  */
-void _pint(stack_t **head, unsigned int count)
+void _pint(stack_t **head, unsigned int line_number)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		fclose(info.file);
 		free(info.line_content);
 		stack_free(*head);
