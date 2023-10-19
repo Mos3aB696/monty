@@ -73,5 +73,6 @@ int _execute(char *line_content, stack_t **stack, unsigned int line_number,
 int main(int argc, char *argv[]);
 void _stack(stack_t **head, unsigned int line_number);
 void _div(stack_t **head, unsigned int line_number);
+void _mod(stack_t **head, unsigned int line_number);
 
 #endif
